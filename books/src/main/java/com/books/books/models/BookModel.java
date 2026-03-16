@@ -1,11 +1,9 @@
-package com.books.books.model;
+package com.books.books.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table (name = "TBL_BOOK")
 public class BookModel {
 
     @Id
