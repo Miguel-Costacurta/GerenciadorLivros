@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Table(name = "tb_pedido")
 public class PedidoModel {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "dataPedido")
     private LocalDateTime data;
