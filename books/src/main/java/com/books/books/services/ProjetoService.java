@@ -24,7 +24,7 @@ public class ProjetoService {
         projetoAtualizado.setNome(projeto.getNome());
         return projetoRepository.save(projetoAtualizado);
     }
-    public void deletarCliente(Long id) {
+    public void deletarProjeto(Long id) {
         projetoRepository.deleteById(id);
     }
 }
