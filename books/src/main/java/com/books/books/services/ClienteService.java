@@ -1,6 +1,5 @@
 package com.books.books.services;
 
-import com.books.books.models.CategoriaModel;
 import com.books.books.models.ClienteModel;
 import com.books.books.repositories.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
