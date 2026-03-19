@@ -25,7 +25,7 @@ public class FornecedorService {
         fornecedorAtualizado.setNomeFantasia(fornecedor.getNomeFantasia());
         return fornecedorRepository.save(fornecedorAtualizado);
     }
-    public void deletarCliente(Long id) {
+    public void deletarFornecedor(Long id) {
         fornecedorRepository.deleteById(id);
     }
 }
