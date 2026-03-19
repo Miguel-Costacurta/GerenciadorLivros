@@ -1,0 +1,31 @@
+package com.books.books.services;
+
+import com.books.books.models.ClienteModel;
+import com.books.books.models.FornecedorModel;
+import com.books.books.repositories.FornecedorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+public class FornecedorService {
+
+    @Autowired
+    private FornecedorRepository fornecedorRepository;
+
+    public List<FornecedorModel> findAll(){ return fornecedorRepository.findAll();}
+    public Optional<FornecedorModel> findById(Long id) {
+        return fornecedorRepository.findById(id);
+    }
+    public FornecedorModel criarFornecedor(FornecedorModel fornecedor) { return fornecedorRepository.save(fornecedor); }
+    public FornecedorModel atualizarFornecedor(FornecedorModel fornecedor, Long id) {
+        FornecedorModel fornecedorAtualizado = fornecedorRepository.findById(id).get();
+        fornecedorAtualizado.setNomeFantasia(fornecedor.getNomeFantasia());
+        return fornecedorRepository.save(fornecedorAtualizado);
+    }
+    public void deletarCliente(Long id) {
+        fornecedorRepository.deleteById(id);
+    }
+}
