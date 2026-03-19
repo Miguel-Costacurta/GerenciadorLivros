@@ -8,7 +8,9 @@ public class CategoriaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "descricaoCategoria")
     private String descricao;
+    @Column(name = "nomeCategoria")
     private String nome;
 
     public Long getId() {
