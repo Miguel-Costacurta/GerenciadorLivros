@@ -37,7 +37,7 @@ public class CategoriaController {
     public ResponseEntity<CategoriaModel> atualizarCategoria(@PathVariable Long id, @RequestBody CategoriaModel categoriaModel) {
         CategoriaModel categoria = categoriaService.findById(id).get();
 
-        categoria.setNome(categoriaModel.getNome());
+        categoria.setDescricao(categoriaModel.getDescricao());
 
         return ResponseEntity.status(200).body(categoria);
     }
