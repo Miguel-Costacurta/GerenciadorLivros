@@ -16,15 +16,18 @@ public class CategoriaService {
     public List<CategoriaModel> findAll() {
         return categoriaRepository.findAll();
     }
+
     public Optional<CategoriaModel> findById(Long id) {
         return categoriaRepository.findById(id);
     }
     public CategoriaModel criarCategoria(CategoriaModel categoria) {
         return categoriaRepository.save(categoria);
     }
+
     public void deletarCategoria(Long id) {
         categoriaRepository.deleteById(id);
     }
+
     public CategoriaModel atualizarCategoria(CategoriaModel categoria, Long id) {
         CategoriaModel categoriaAtualizado = categoriaRepository.findById(id).get();
         categoriaAtualizado.setNome(categoria.getNome());
